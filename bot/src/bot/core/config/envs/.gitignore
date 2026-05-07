@@ -1,0 +1,4 @@
+# Explicitly Ignoring Files
+.env
+.yaml
+.yml
