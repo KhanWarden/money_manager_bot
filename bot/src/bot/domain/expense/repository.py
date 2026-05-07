@@ -7,7 +7,7 @@ from bot.domain.shared import Money, EntityId
 
 class IExpenseRepository(ABC):
     @abstractmethod
-    def save(
+    async def save(
         self,
         amount: Money,
         category_id: EntityId,
@@ -15,7 +15,7 @@ class IExpenseRepository(ABC):
         pass
 
     @abstractmethod
-    def get(
+    async def get_by_period(
         self,
         period_start: datetime,
         period_end: datetime,
@@ -23,7 +23,7 @@ class IExpenseRepository(ABC):
         pass
 
     @abstractmethod
-    def get_by_category(
+    async def get_by_category(
         self,
         category_id: EntityId,
         period_start: datetime,
