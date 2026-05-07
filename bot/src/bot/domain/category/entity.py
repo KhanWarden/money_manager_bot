@@ -6,6 +6,7 @@ from bot.domain.shared import EntityId
 @dataclass
 class Category:
     id: EntityId
+    user_id: EntityId
     name: str
     is_active: bool = True
 
