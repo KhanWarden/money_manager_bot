@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 
 class LoggingConfig(BaseModel):
-    format: str = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     level: Literal[
         "DEBUG",
         "INFO",
