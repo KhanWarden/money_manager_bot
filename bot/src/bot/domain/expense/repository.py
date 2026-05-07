@@ -7,11 +7,7 @@ from bot.domain.shared import Money, EntityId
 
 class IExpenseRepository(ABC):
     @abstractmethod
-    async def save(
-        self,
-        amount: Money,
-        category_id: EntityId,
-    ) -> None:
+    async def save(self, expense: Expense) -> None:
         pass
 
     @abstractmethod
