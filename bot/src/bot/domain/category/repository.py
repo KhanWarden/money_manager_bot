@@ -6,7 +6,11 @@ from bot.domain.shared import EntityId
 
 class ICategoryRepository(ABC):
     @abstractmethod
-    async def get_by_name(self, category_id: EntityId) -> Category | None:
+    async def get_by_name(
+        self,
+        user_id: EntityId,
+        name: str,
+    ) -> Category | None:
         pass
 
     @abstractmethod
