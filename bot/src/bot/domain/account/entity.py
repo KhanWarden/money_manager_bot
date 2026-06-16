@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from decimal import Decimal
 
 from bot.domain.account import AccountKind
 from bot.domain.shared import EntityId, Money
