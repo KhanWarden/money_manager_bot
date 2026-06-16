@@ -16,3 +16,7 @@ class IAccountRepository(ABC):
     @abstractmethod
     async def get_by_user(self, user_id: int) -> list[Account] | None:
         pass
+
+    @abstractmethod
+    async def get_by_name(self, user_id: EntityId, name: str):
+        pass
